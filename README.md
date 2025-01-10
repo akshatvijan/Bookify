@@ -56,9 +56,7 @@ Bookify is a fully functional bookstore built using the MERN stack (MongoDB, Exp
 
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License.
+here's the workin video of project ->
 
 
 https://github.com/user-attachments/assets/834db3a6-23f6-4f16-be0b-cf7c74437da6
