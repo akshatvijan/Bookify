@@ -6,7 +6,7 @@ import {getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAmighQRkzZf-l9bvrcNIW9j_IgAj7-RIc",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "book-store-mern-app-5d8c7.firebaseapp.com",
   projectId: import.meta.env.VITE_PROJECT_ID,
   storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
