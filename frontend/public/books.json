@@ -1,0 +1,202 @@
+[
+  {
+    "_id": 1,
+    "title": "soul",
+    "description": "Olivia Wilson explores the profound depths of human existence, focusing on the emotional, experiential, and aspirational aspects of life.",
+    "category": "fiction",
+    "trending": true,
+    "coverImage": "1.jpg",
+    "oldPrice": 29.99,
+    "newPrice": 19.99
+  },
+  {
+    "_id": 2,
+    "title": "Adams World",
+    "description": "Adams World takes readers on a gripping journey through the eyes of Adam, a brilliant yet conflicted young man caught between the mundane and the extraordinary. Living in a small town that holds dark secrets, Adam stumbles upon a mysterious artifact that changes his perception of reality.",
+    "category": "adventure",
+    "trending": true,
+    "coverImage": "2.jpg",
+    "oldPrice": 24.99,
+    "newPrice": 14.99
+  },
+  {
+    "_id": 3,
+    "title": "Hooked",
+    "description": "Hooked: How to Build Habit-Forming Products by Ryan Hover is a must-read for entrepreneurs, designers, and product developers who want to create products that keep users coming back. In this insightful guide, Hover breaks down the psychology behind user behavior and provides a practical framework for building habit-forming products.",
+    "category": "marketing",
+    "trending": true,
+    "coverImage": "3.jpg",
+    "oldPrice": 39.99,
+    "newPrice": 29.99
+  },
+  {
+    "_id": 4,
+    "title": "Digital Marketing Revolution",
+    "description": "explores the transformative power of digital marketing, highlighting key strategies and tools to stay ahead in the ever-evolving online landscape. It provides insights into data-driven techniques, customer engagement, and leveraging digital platforms to drive business growth in the modern era.",
+    "category": "business",
+    "trending": true,
+    "coverImage": "4.jpg",
+    "oldPrice": 49.99,
+    "newPrice": 39.99
+  },
+  {
+    "_id": 5,
+    "title": "Internet Marketing Success Manual For Retailers",
+    "description": "This comprehensive guide provides retailers with proven internet marketing techniques to increase online visibility and drive sales. It focuses on practical strategies like optimizing e-commerce platforms, leveraging social media, and using digital advertising to enhance retail success in the competitive online marketplace.",
+    "category": "marketing",
+    "trending": false,
+    "coverImage": "5.jpg",
+    "oldPrice": 19.99,
+    "newPrice": 9.99
+  },
+  {
+    "_id": 6,
+    "title": "Check-In Checkout",
+    "description": "Check-In Checkout by Keran Pantth Joshi is a spine-chilling horror novel that weaves together tales of terror set in eerie, mysterious locations. The story follows characters who encounter supernatural forces while staying in a haunted hotel, where the boundary between the living and the dead blurs.",
+    "category": "horror",
+    "trending": true,
+    "coverImage": "6.jpg",
+    "oldPrice": 44.99,
+    "newPrice": 34.99
+  },
+  {
+    "_id": 7,
+    "title": "By The Sword - Guardians Of The Crown",
+    "description": "By the Sword is an epic historical fiction novel set against the turbulent backdrop of the English Civil War. Alison Stuart weaves a tale of loyalty, love, and survival as her protagonist, Jonathan Thornton, a battle-hardened soldier and a man of honor, finds himself torn between his allegiance to the Royalist cause and his secretive, personal mission to seek justice for his fallen comrades.",
+    "category": "fiction",
+    "trending": true,
+    "coverImage": "7.jpg",
+    "oldPrice": 59.99,
+    "newPrice": 49.99
+  },
+  {
+    "_id": 8,
+    "title": "Dragon Throne",
+    "description": "An exhilarating adventure novel set in a fantasy world where a small town, Fairfield, is devastated by a dragon attack. In the aftermath, the King of Proudhaven declares war on all dragons, igniting a fierce conflict that turns the entire country into a battlefield.",
+    "category": "adventure",
+    "trending": false,
+    "coverImage": "8.jpg",
+    "oldPrice": 21.99,
+    "newPrice": 16.99
+  },
+  {
+    "_id": 9,
+    "title": "Into The Jungle Adventure",
+    "description": "Into the Jungle Adventure is a thrilling tale that transports readers into the heart of a lush, mysterious jungle filled with hidden treasures and perilous challenges. The story follows a group of intrepid explorers as they navigate through dense foliage, encounter exotic wildlife, and unravel ancient secrets.",
+    "category": "adventure",
+    "trending": true,
+    "coverImage": "9.jpg",
+    "oldPrice": 27.99,
+    "newPrice": 18.99
+  },
+  {
+    "_id": 10,
+    "title": "The Lonely Road We Travelled",
+    "description": "The Lonely We Travelled is a poignant exploration of solitude and the human experience as it follows a group of travelers on a journey through vast landscapes, both physical and emotional. As they navigate the challenges of their individual paths, they discover unexpected connections and the shared struggles of loneliness, ultimately revealing that even in isolation, bonds can form, and healing can begin.",
+    "category": "fiction",
+    "trending": false,
+    "coverImage": "10.jpg",
+    "oldPrice": 14.99,
+    "newPrice": 10.99
+  },
+  {
+    "_id": 11,
+    "title": "The Nightmare Chronicles",
+    "description": "The Nightmare Chronicles is a chilling collection of thirteen horror stories that delve into the darkest corners of the human psyche. It begins with a harrowing kidnapping and unfolds through various unsettling narratives, including a search for a deceased wife in Manhattan and a journalist's quest for evil in a plague-stricken India.",
+    "category": "horror",
+    "trending": true,
+    "coverImage": "11.jpg",
+    "oldPrice": 32.99,
+    "newPrice": 25.99
+  },
+  {
+    "_id": 12,
+    "title": "Body In the Wood",
+    "description": "Body in the Wood is a gripping mystery novel that follows a small-town investigator as they uncover the dark secrets hidden within a tranquil forest. When a body is discovered deep in the woods, the case unravels a web of intrigue, betrayal, and long-buried truths.",
+    "category": "horror",
+    "trending": true,
+    "coverImage": "12.jpg",
+    "oldPrice": 19.99,
+    "newPrice": 9.99
+  },
+  {
+    "_id": 13,
+    "title": "Those Eyes",
+    "description": "Those Eyes is a spine-tingling horror novel that plunges readers into a world where the unseen watches—and waits. Raymond Deckam masterfully crafts a story of psychological terror that will leave you questioning the darkness around you.",
+    "category": "horror",
+    "trending": false,
+    "coverImage": "13.jpg",
+    "oldPrice": 26.99,
+    "newPrice": 21.99
+  },
+  {
+    "_id": 14,
+    "title": "The Mind Of A Leader",
+    "description": "This insightful guide explores the essential qualities of effective leadership, emphasizing the importance of mindfulness, selflessness, and compassion. Based on extensive research involving thousands of leaders, it outlines strategies to enhance self-awareness and improve relationships within teams and organizations.",
+    "category": "business",
+    "trending": true,
+    "coverImage": "14.jpg",
+    "oldPrice": 34.99,
+    "newPrice": 24.99
+  },
+  {
+    "_id": 15,
+    "title": "The Battle For The King Throne",
+    "description": "This thrilling fantasy novel takes readers on an epic journey filled with political intrigue, ancient prophecies, and fierce battles as rival factions vie for control of a coveted throne. Against a backdrop of treachery and loyalty, heroes and villains emerge, each with their own motives and ambitions.",
+    "category": "fiction",
+    "trending": false,
+    "coverImage": "15.jpg",
+    "oldPrice": 22.99,
+    "newPrice": 12.99
+  },
+  {
+    "_id": 16,
+    "title": "Relic",
+    "description": "Relic is the third book in the Mars Frontier series by Paul Rix. It continues the story of humanity's struggle to establish a foothold on Mars amidst challenges like isolation and resource scarcity. The narrative follows a group of astronauts who must confront both external dangers and internal conflicts as they navigate the harsh Martian landscape.",
+    "category": "fiction",
+    "trending": false,
+    "coverImage": "16.jpg",
+    "oldPrice": 24.99,
+    "newPrice": 12.99
+  },
+  {
+    "_id": 17,
+    "title": "Selected By Fate",
+    "description": "In this altered state, Tony is selected to join an elite law enforcement group led by a figure who communicates with him telepathically. Upon waking, he realizes that his experiences were not merely dreams but a calling to combat the criminal elements that escape the justice system.",
+    "category": "adventure",
+    "trending": false,
+    "coverImage": "17.jpg",
+    "oldPrice": 49.99,
+    "newPrice": 39.99
+  },
+  {
+    "_id": 18,
+    "title": "Spirit Run",
+    "description": "In this compelling memoir, the author shares a transformative journey of self-discovery through a 6,000-mile marathon that traverses North America. As the son of Mexican immigrants, he flees a life of labor in the fruit-packing industry to join a group of Indigenous runners participating in the Peace and Dignity Journeys.",
+    "category": "adventure",
+    "trending": false,
+    "coverImage": "18.jpg",
+    "oldPrice": 18.99,
+    "newPrice": 12.99
+  },
+  {
+    "_id": 19,
+    "title": "The Great Gatsby",
+    "description": "The Great Gatsby is a classic novel by F. Scott Fitzgerald, set in the Jazz Age of the 1920s. The story is narrated by Nick Carraway, who recounts his experiences living next to the mysterious millionaire Jay Gatsby. Gatsby is known for his lavish parties and his unrelenting love for Daisy Buchanan, a beautiful but shallow woman who is married to the wealthy Tom Buchanan.",
+    "category": "fiction",
+    "trending": true,
+    "coverImage": "19.jpg",
+    "oldPrice": 35.99,
+    "newPrice": 27.99
+  },
+  {
+    "_id": 20,
+    "title": "The Good Sister",
+    "description": "In this gripping tale, the protagonist, a former drug trafficker turned FBI fugitive, must navigate her turbulent past while trying to carve out a new life after marrying a police officer. Following the death of her brother Gabriel, she becomes entangled in a web of deception, attempting to reshape her identity by undermining her other brother, Tomas, a college professor with Asperger's.",
+    "category": "fiction",
+    "trending": false,
+    "coverImage": "20.jpg",
+    "oldPrice": 24.99,
+    "newPrice": 14.99
+  }
+]
