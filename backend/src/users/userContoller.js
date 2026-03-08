@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require("./usermodel");
+const User = require("./userModel");
 
 // 🔥 Create default admin if not exists
 module.exports.createDefaultAdmin = async () => {
