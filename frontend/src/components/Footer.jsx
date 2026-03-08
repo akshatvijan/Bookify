@@ -1,10 +1,22 @@
 import React from 'react'
-import footerLogo  from "../assets/footer-logo.png"
-import {Link} from "react-router-dom"
+import footerLogo from "../assets/footer-logo.png"
+import { Link } from "react-router-dom"
+import { useState } from 'react'
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e) => {
+    if (email) {
+      alert(`Thank you for subscribing with ${email}!`);
+      setEmail("");
+    } else {
+      alert("Please enter a valid email address.");
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-10 sm:px-12 px-4 ">
       {/* Top Section */}
@@ -29,9 +41,11 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-2 rounded-l-md text-black"
             />
-            <button className="bg-primary px-6 py-2 rounded-r-md hover:bg-primary-dark">
+            <button onClick={handleSubscribe} className="bg-primary px-6 py-2 rounded-r-md hover:bg-primary-dark">
               Subscribe
             </button>
           </div>
@@ -48,13 +62,13 @@ const Footer = () => {
 
         {/* Right Side - Social Icons */}
         <div className="flex gap-6">
-          <Link to="https://facebook.com" target="_blank"  className="hover:text-primary">
+          <Link to="https://facebook.com" target="_blank" className="hover:text-primary">
             <FaFacebook size={24} />
           </Link>
           <Link to="https://twitter.com" target="_blank" className="hover:text-primary">
             <FaTwitter size={24} />
           </Link>
-          <Link to="https://instagram.com" target="_blank"  className="hover:text-primary">
+          <Link to="https://instagram.com" target="_blank" className="hover:text-primary">
             <FaInstagram size={24} />
           </Link>
         </div>

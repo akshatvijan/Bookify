@@ -8,73 +8,105 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import avatarImg from "../assets/avatar.png";
 import { useSelector } from "react-redux";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
-    {
-        name: "Dashboard", href:"/dashboard"
-    },
-    {
-        name : "Orders",href : "/order"
-    },
-    {
-        name : "Cart Page" ,href:"/cart"
-    },
-    {
-        name : "Check Out",href : "/checkout"
-    }
-]
+  { name: "Dashboard", href: "/dashboard" },
+  { name: "Orders", href: "/order" },
+  { name: "Cart Page", href: "/cart" },
+  { name: "Check Out", href: "/checkout" },
+];
+
 const Navbar = () => {
-    const [isDropDownOpen,setisDropDownOpen] = useState(false);
-    const cartItems = useSelector(state => state.cart.cartItems);
-    const {currentUser,logout} = useAuth()
-    const handleLogout = () =>{
-      logout();
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const { currentUser, logout } = useAuth();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${searchQuery.trim()}`);
     }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      setIsDropDownOpen(false);
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
+
   return (
     <header className="max-w-screen-2xl mx-auto md:mx-16 px-4 py-6">
       <nav className="flex justify-between items-center">
+
+        {/* Left Section */}
         <div className="flex items-center md:gap-16 gap-4">
-          <Link to="/">
-            <div className="flex gap-2"><HiBars3CenterLeft className="size-6" /> Bookify</div>
+          <Link to="/" className="flex gap-2 items-center font-semibold">
+            <HiBars3CenterLeft className="size-6" />
+            Bookify
           </Link>
-          <div className="relative sm:w-72 w-40 space-x-2">
-            <IoIosSearch className="absolute inline-block left-3 inset-y-1 size-6" />
+
+          <form onSubmit={handleSearch} className="relative sm:w-72 w-40">
+            <IoIosSearch className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-gray-500" />
             <input
               type="text"
               placeholder="Search here"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="bg-[#EAEAEA] w-full py-1 md:px-8 px-6 rounded-md focus:outline-none"
             />
-          </div>
+          </form>
         </div>
-        <div className="relative flex items-center md:space-x-3 space-x-2">
+
+        {/* Right Section */}
+        <div className="relative flex items-center md:space-x-4 space-x-2">
+
+          {/* User Section */}
           <div>
             {currentUser ? (
               <>
-                <button onClick={()=>setisDropDownOpen(!isDropDownOpen)}>
+                <button
+                  onClick={() => setIsDropDownOpen(!isDropDownOpen)}
+                >
                   <img
-                    src={avatarImg}
-                    alt=""
-                    className={`size-7 rounded-full ${
-                      currentUser ? "ring-2 ring-blue-500" : ""
-                    }`}
+                    src={currentUser?.photoURL || avatarImg}
+                    alt="User"
+                    className="size-8 rounded-full ring-2 ring-blue-500"
                   />
                 </button>
-                {
-                    isDropDownOpen && (
-                        <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
-                            <ul className="py-2">
-                                {
-                                    navigation.map((item)=> (
-                                        <li key={item.name} onClick={()=> setisDropDownOpen(false)}><Link to={item.href} className="block px-4 py-2 text-sm hover:bg-gray-100">{item.name}</Link></li>
-                                    ))
-                                }
-                                <li className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                  <button onClick={handleLogout} className="">Logout</button>
-                                </li>
-                            </ul>
-                        </div>
-                    )
-                }
+
+                {isDropDownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                    <ul className="py-2">
+                      {navigation.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            to={item.href}
+                            onClick={() => setIsDropDownOpen(false)}
+                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+
+                      <li>
+                        <button
+                          onClick={handleLogout}
+                          className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+                        >
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </>
             ) : (
               <Link to="/login">
@@ -82,18 +114,23 @@ const Navbar = () => {
               </Link>
             )}
           </div>
-          <button className="hidden sm:block">
+
+          {/* Wishlist Icon */}
+          <button onClick={() => alert("Wishlist feature coming soon!")} className="hidden sm:block">
             <CiHeart className="size-6" />
           </button>
+
+          {/* Cart */}
           <Link
             to="/cart"
             className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-md"
           >
             <MdOutlineShoppingCart className="size-4" />
-            {
-              cartItems.length>0 ?  <span className="text-sm font-semibold sm:ml-1">{cartItems.length}</span> : <span className="text-sm font-semibold sm:ml-1">0</span> 
-            }         
+            <span className="text-sm font-semibold sm:ml-1">
+              {cartItems.length}
+            </span>
           </Link>
+
         </div>
       </nav>
     </header>

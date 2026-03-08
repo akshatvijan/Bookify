@@ -9,10 +9,10 @@ const Banner = () => {
           New Releases This Week
         </h1>
         <p className="mb-10">Refresh your reading list with the newest literary gems—whether you're into gripping thrillers or inspiring memoirs, this week's latest releases have something for every reader.</p>
-        <button className="btn-primary">Subscribe</button>
+        <button onClick={() => alert("Thank you for subscribing!")} className="btn-primary">Subscribe</button>
       </div>
       <div className="md:w-1/2 w-full flex items-center md:justify-end">
-        <img src={bannerImg} alt="banner"/>
+        <img src={bannerImg} alt="banner" />
       </div>
     </div>
   );
