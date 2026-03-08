@@ -4,13 +4,19 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
+
+// ✅ PORT for Render deployment
 const port = process.env.PORT || 5000;
 
 // ✅ Middlewares
 app.use(express.json());
+
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://bookify-lilac.vercel.app"
+    ],
     credentials: true,
   })
 );
@@ -37,7 +43,7 @@ async function main() {
     await mongoose.connect(db);
     console.log("✅ Connected to MongoDB");
 
-    // 🔥 Automatically create default admin
+    // create default admin
     await createDefaultAdmin();
   } catch (err) {
     console.log("❌ Database connection error:", err);
