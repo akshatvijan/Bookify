@@ -1,5 +1,5 @@
 const getBaseUrl = () =>{
-    return "http://localhost:5000"
+    return "https://bookify-c6dv.onrender.com"
 }
 
 export default getBaseUrl;
