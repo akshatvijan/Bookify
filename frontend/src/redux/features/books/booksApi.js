@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import getBaseUrl from '../../../utils/baseURL'
 const baseQuery = fetchBaseQuery({
-    baseUrl : `${getBaseUrl()}/api/books`,
+    baseUrl : "https://bookify-c6dv.onrender.com/api/books",
     credentials : 'include' ,
     prepareHeaders : (Headers) => {
         const token  = localStorage.getItem('token');
