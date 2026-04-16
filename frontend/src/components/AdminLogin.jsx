@@ -42,6 +42,9 @@ const AdminLogin = () => {
     return (
         <div className="h-screen flex justify-center items-center">
           <div className="w-full max-w-sm  mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div className="mb-4">
+              <Link to="/" className="text-sm text-blue-500 hover:text-blue-700 font-semibold">← Back to Home</Link>
+            </div>
             <h2 className="text-xl fond-semibold mb-4 ">Admin Dashboard Login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4">

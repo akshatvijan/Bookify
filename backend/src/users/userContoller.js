@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const User = require("./userModel");
+const bcrypt = require("bcrypt");
 
 // 🔥 Create default admin if not exists
 module.exports.createDefaultAdmin = async () => {
@@ -34,7 +35,8 @@ module.exports.adminLogin = async (req, res) => {
       return res.status(404).send({ message: "Admin not found!" });
     }
 
-    if (password !== admin.password) {
+    const isPasswordValid = await bcrypt.compare(password, admin.password);
+    if (!isPasswordValid) {
       return res.status(401).send({ message: "Invalid password!" });
     }
 
